@@ -33,23 +33,28 @@ h1 a:hover { text-decoration: none; }
 	background: url('img/krak_dc_a.png') right bottom no-repeat, black url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMeDDcYbNv5/QAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAQSURBVAjXYwgOCGBgYGAAAAW9APRNISeEAAAAAElFTkSuQmCC') repeat fixed;
 }
 
-#header_rat {
+.header_btn {
 	position: absolute;
 	top: 0;
-	right: 10em;
 	height: 4.5em;
 	margin: 0;
 	padding: 0;
 }
+a .header_btn:hover {
+	border-bottom: solid 5px red;
+}
+
+#header_rat {
+	right: 5em;
+}
+
+#header_ew {
+	right: 0em;
+}
 
 #header_skull {
-	position: absolute;
 	transform: scaleX(-1);
-	top: 0;
-	right: 2em;
-	height: 4.5em;
-	margin: 0;
-	padding: 0;
+	right: 10em;
 }
 #header {
 	background-color: green;

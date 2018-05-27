@@ -155,6 +155,18 @@ a .header_btn:hover {
 	width: 50px;
 }
 
+.page_nav {
+	width: 800px;
+	text-align: center;
+}
+.page_nav a {
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 0.4em 0.6em;
+	border-radius: 0.4em;
+	margin: 0.5em;
+}
+
+
 /* TODO right hand nav section? */
 #rh_nav_sect {
 	position: absolute;

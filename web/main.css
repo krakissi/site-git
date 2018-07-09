@@ -103,6 +103,7 @@ a .header_btn:hover {
 	margin: 1.5em 1em;
 	border-radius: 0.4em;
 	box-shadow: 0.1em 0.1em 0.2em black;
+	position: relative;
 }
 .story img {
 	max-width: 350px;
@@ -125,7 +126,9 @@ a .header_btn:hover {
 }
 
 .story .dateline {
-	float: right;
+	position: absolute;
+	top: 1em;
+	right: 1em;
 	font-size: 0.7em;
 }
 .story h2 a {

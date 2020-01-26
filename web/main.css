@@ -2,7 +2,8 @@ body {
 	color: white;
 	font-family: sans-serif;
 	margin: 0 2.5em;
-	background: #13abfc;
+	background: black url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMeDDcYbNv5/QAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAQSURBVAjXYwgOCGBgYGAAAAW9APRNISeEAAAAAElFTkSuQmCC') repeat fixed;
+	font-size: 150%;
 }
 a {
 	color: #7fabff;
@@ -21,16 +22,15 @@ h1 a:hover { text-decoration: none; }
 
 #content {
 	position: relative;
-	min-width: 850px;
-	max-width: 1400px;
+	min-width: 900px;
+	max-width: 1500px;
 	color: white;
 	padding: 0;
 	margin: 0;
 	margin-bottom: 5em;
 	border: 2px solid black;
 	border-top: none;
-	/*background: white url('img/krak_dc.png') right bottom no-repeat;*/
-	background: url('img/krak_dc_a.png') right bottom no-repeat, black url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAIAAAAW4yFwAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMeDDcYbNv5/QAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAQSURBVAjXYwgOCGBgYGAAAAW9APRNISeEAAAAAElFTkSuQmCC') repeat fixed;
+	background: url('img/krak_dc_a.png') right bottom no-repeat, #13abfc;
 }
 
 .header_btn {
@@ -72,7 +72,7 @@ a .header_btn:hover {
 }
 #content_body {
 	min-height: 750px;
-	max-width: 800px;
+	max-width: calc(100% - 50px);
 }
 
 #footer {
@@ -99,7 +99,7 @@ a .header_btn:hover {
 
 .story {
 	padding: 1em 1em 2em 1em;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 	margin: 1.5em 1em;
 	border-radius: 0.4em;
 	box-shadow: 0.1em 0.1em 0.2em black;
@@ -159,34 +159,12 @@ a .header_btn:hover {
 }
 
 .page_nav {
-	width: 800px;
+	width: calc(100% - 50px);
 	text-align: center;
 }
 .page_nav a {
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.8);
 	padding: 0.4em 0.6em;
 	border-radius: 0.4em;
 	margin: 0.5em;
-}
-
-
-/* TODO right hand nav section? */
-#rh_nav_sect {
-	position: absolute;
-	top: 6.1em;
-	right: 83px;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-radius: 0.4em;
-	width: calc(100% - 909px);
-	padding: 1em;
-}
-@media (max-width: 1240px) {
-	#rh_nav_sect {
-		position: relative;
-		top: unset;
-		right: unset;
-		width: unset;
-
-		margin: 3em 1em 1.5em 1em;
-	}
 }

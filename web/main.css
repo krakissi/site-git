@@ -22,7 +22,7 @@ h1 a:hover { text-decoration: none; }
 
 #content {
 	position: relative;
-	min-width: 900px;
+	min-width: 1000px;
 	max-width: 1500px;
 	color: white;
 	padding: 0;
@@ -52,10 +52,6 @@ a .header_btn:hover {
 	right: 0em;
 }
 
-#header_skull {
-	transform: scaleX(-1);
-	right: 10em;
-}
 #header {
 	background-color: green;
 	color: white;
@@ -106,7 +102,7 @@ a .header_btn:hover {
 	position: relative;
 }
 .story img {
-	max-width: 350px;
+	max-width: calc(50% - 10px);
 }
 .story a:nth-child(odd) img {
 	float: right;

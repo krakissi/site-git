@@ -30,7 +30,7 @@ h1 a:hover { text-decoration: none; }
 	margin-bottom: 5em;
 	border: 2px solid black;
 	border-top: none;
-	background: url('img/krak_dc_a.png') right bottom no-repeat, #13abfc;
+	background: url('img/krak_dc_a.png') right bottom no-repeat, #13abfc url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAACXBIWXMAAC4jAAAuIwF4pT92AAAAB3RJTUUH5AEaFCQJ0N4/0QAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAAAoSURBVAjXYxRe/YeBgYHhGgODFgMTAwRoMTBcY2BiuMYA5zNBxCAAAL1zBcLit83mAAAAAElFTkSuQmCC') repeat fixed;
 }
 
 .header_btn {

@@ -63,9 +63,6 @@ a .header_btn:hover {
 	margin: 0;
 }
 
-#content_background {
-	padding-bottom: 775px;
-}
 #content_body {
 	min-height: 750px;
 	max-width: calc(100% - 50px);

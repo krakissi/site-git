@@ -1,3 +1,6 @@
+#!/bin/bash
+
+cat << EOF
 body {
 	color: white;
 	font-family: sans-serif;
@@ -162,3 +165,16 @@ a .header_btn:hover {
 	border-radius: 0.4em;
 	margin: 0.5em;
 }
+EOF
+
+# /* Special CSS for the night/evening. */
+if [[ "$QUERY_STRING" == *"night"* ]]; then
+cat << EOF
+
+/* FIXME debug */
+.night {
+	background-color: black;
+}
+
+EOF
+fi

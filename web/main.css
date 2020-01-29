@@ -143,9 +143,10 @@ a .header_btn:hover {
 #social .social_icon {
 	padding: 0.5em;
 	border-radius: inherit;
+	transition: 0.3s;
 }
 #social .social_icon:hover {
-	background-color: whitesmoke;
+	background-color: #dadada;
 }
 #social .social_icon img {
 	width: 50px;

@@ -40,11 +40,11 @@ export default function Clouds(config){
 
 			for(let cloud_it = 0, cloud_len = me.active_clouds.length; cloud_it < cloud_len; cloud_it++){
 				let orbConfig = me.active_clouds[cloud_it];
-				ctx.fillStyle = orbConfig.fill;
 
 				let drift = orbConfig.speed * time;
 				let cloud_out = true;
 
+				ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
 				for(let orb_it = 0, orb_len = orbConfig.list.length; orb_it < orb_len; orb_it++){
 					let orb = orbConfig.list[orb_it];
 
@@ -53,6 +53,15 @@ export default function Clouds(config){
 					// Is this orb still on screen?
 					if((orb.cx + orb.r) < (me.w * 1.25))
 						cloud_out = false;
+
+					ctx.beginPath();
+					ctx.arc(orb.cx + 10, orb.cy + 10, orb.r, 0, 2 * Math.PI);
+					ctx.fill();
+				}
+
+				ctx.fillStyle = orbConfig.fill;
+				for(let orb_it = 0, orb_len = orbConfig.list.length; orb_it < orb_len; orb_it++){
+					let orb = orbConfig.list[orb_it];
 
 					ctx.beginPath();
 					ctx.arc(orb.cx, orb.cy, orb.r, 0, 2 * Math.PI);
@@ -93,7 +102,7 @@ Clouds.prototype = {
 	// Produce a new, random cloud.
 	cloud_make: function(randomPos){
 		var orbs = parseInt(Math.random() * 5) + 5;
-		let r = (Math.random() * 20) + 20;
+		let r = 1.25 * ((Math.random() * 20) + 20);
 
 		var base = {
 			cx: (randomPos ? ((Math.random() * this.w * 1.5) - (this.w * 0.25)) : -(this.w * 0.25)),
@@ -101,16 +110,18 @@ Clouds.prototype = {
 			r: r
 		};
 
-		var cloudList = [];
+		var cloudList = [ base ];
+		let arc = Math.random() * 2 * Math.PI;
 		for(var i = 0; i < orbs; i++){
-			let arc = Math.random() * 2 * Math.PI;
-			let r = (base.r + (2 * base.r * Math.random()));
+			let r = (base.r + (1.5 * base.r * Math.random()));
 
 			cloudList.push({
 				cx: (base.cx + (Math.cos(arc) * base.r * 3)),
 				cy: (base.cy + (Math.sin(arc) * base.r / 2)),
 				r: r
 			});
+
+			arc += Math.random() * Math.PI;
 		}
 
 		return {

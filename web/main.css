@@ -7,7 +7,7 @@ body {
 	color: white;
 	font-family: sans-serif;
 	margin: 0;
-	background: #102;
+	background-color: #021;
 	font-size: 150%;
 	padding: 1em 0 0 0;
 }
@@ -177,6 +177,10 @@ EOF
 # /* Special CSS for the night/evening. */
 if [[ "$QUERY_STRING" == *"night"* ]]; then
 cat << EOF
+
+body {
+	background-color: #102;
+}
 
 EOF
 fi

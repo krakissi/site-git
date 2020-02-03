@@ -1,7 +1,7 @@
 export default function Clouds(config){
 	var baseConfig = {
 		// Number of clouds in the sky.
-		clouds: 7
+		clouds: 10
 	};
 
 	for(let k in config)
@@ -106,7 +106,7 @@ Clouds.prototype = {
 
 		var base = {
 			cx: (randomPos ? ((Math.random() * this.w * 1.5) - (this.w * 0.25)) : -(this.w * 0.25)),
-			cy: (((Math.random() * this.h) / 4) + (3 * r)),
+			cy: (((Math.random() * this.h) / 4) + (2.5 * r)),
 			r: r
 		};
 
@@ -116,7 +116,7 @@ Clouds.prototype = {
 			let r = (base.r + (1.5 * base.r * Math.random()));
 
 			cloudList.push({
-				cx: (base.cx + (Math.cos(arc) * base.r * 3)),
+				cx: (base.cx + (Math.cos(arc) * base.r * 2)),
 				cy: (base.cy + (Math.sin(arc) * base.r / 2)),
 				r: r
 			});

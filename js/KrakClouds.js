@@ -55,7 +55,7 @@ export default function Clouds(config){
 						cloud_out = false;
 
 					ctx.beginPath();
-					ctx.arc(orb.cx + 10, orb.cy + 10, orb.r, 0, 2 * Math.PI);
+					ctx.arc(orb.cx + 10, orb.cy + 10 + (Math.sin((orb.cx / 400) * orb.theta) * 5), orb.r, 0, 2 * Math.PI);
 					ctx.fill();
 				}
 
@@ -64,7 +64,7 @@ export default function Clouds(config){
 					let orb = orbConfig.list[orb_it];
 
 					ctx.beginPath();
-					ctx.arc(orb.cx, orb.cy, orb.r, 0, 2 * Math.PI);
+					ctx.arc(orb.cx, orb.cy + (Math.sin((orb.cx / 400) * orb.theta) * 5), orb.r, 0, 2 * Math.PI);
 					ctx.fill();
 				}
 
@@ -107,7 +107,8 @@ Clouds.prototype = {
 		var base = {
 			cx: (randomPos ? ((Math.random() * this.w * 1.5) - (this.w * 0.25)) : -(this.w * 0.25)),
 			cy: (((Math.random() * this.h) / 4) + (3 * r)),
-			r: r
+			r: r,
+			theta: 0
 		};
 
 		var cloudList = [ base ];
@@ -118,7 +119,8 @@ Clouds.prototype = {
 			cloudList.push({
 				cx: (base.cx + (Math.cos(arc) * base.r * 2)),
 				cy: (base.cy + (Math.sin(arc) * base.r / 2)),
-				r: r
+				r: r,
+				theta: arc
 			});
 
 			arc += Math.random() * Math.PI;

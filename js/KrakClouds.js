@@ -95,7 +95,7 @@ Clouds.prototype = {
 
 	// Adjust the canvas, based on the size of the window
 	resize: function(){
-		this.canvas.height = this.h = this.height = 900;
+		this.canvas.height = this.h = this.height = 1000
 		this.canvas.width = this.w = 1500;
 	},
 
@@ -106,7 +106,7 @@ Clouds.prototype = {
 
 		var base = {
 			cx: (randomPos ? ((Math.random() * this.w * 1.5) - (this.w * 0.25)) : -(this.w * 0.25)),
-			cy: (((Math.random() * this.h) / 4) + (2.5 * r)),
+			cy: (((Math.random() * this.h) / 4) + (3 * r)),
 			r: r
 		};
 

@@ -139,8 +139,8 @@ class KrakClouds extends HTMLElement {
 			krak-clouds {
 				position: relative;
 				display: block;
-		` + (this.hasAttribute('skyheight') ?
-			("height: " + this.getAttribute('skyheight') + "px;") :
+		` + (this.hasAttribute('height') ?
+			("height: " + this.getAttribute('height') + "px;") :
 			""
 		) + `
 				min-height: 500px;

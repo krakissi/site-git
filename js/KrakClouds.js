@@ -81,8 +81,8 @@ export default function Clouds(config){
 };
 Clouds.prototype = {
 	init: function(){
-		this.resize();
-		window.addEventListener('resize', this.resize.bind(this));
+		this.canvas.height = this.h = 1000;
+		this.canvas.width = this.w = 1500;
 
 		this.context = this.canvas.getContext('2d');
 
@@ -93,15 +93,9 @@ Clouds.prototype = {
 		this.cloud_update();
 	},
 
-	// Adjust the canvas, based on the size of the window
-	resize: function(){
-		this.canvas.height = this.h = this.height = 1000
-		this.canvas.width = this.w = 1500;
-	},
-
 	// Produce a new, random cloud.
 	cloud_make: function(randomPos){
-		var orbs = parseInt(Math.random() * 5) + 5;
+		var orbs = parseInt(Math.random() * 5) + 6;
 		let r = 1.25 * ((Math.random() * 20) + 20);
 
 		var base = {
@@ -140,10 +134,20 @@ class KrakClouds extends HTMLElement {
 
 		var style = document.createElement('style');
 		style.textContent = `
-			krak-snow {
+			krak-clouds {
 				position: relative;
+				display: block;
+		` + (this.hasAttribute('skyheight') ?
+			("height: " + this.getAttribute('skyheight') + "px;") :
+			""
+		) + `
+				min-height: 500px;
 			}
 			canvas.krakclouds {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+
 				opacity: 0.8;
 				width: 100%;
 				z-index: 9001;

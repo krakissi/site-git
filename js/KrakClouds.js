@@ -44,24 +44,26 @@ export default function Clouds(config){
 				let drift = orbConfig.speed * time;
 				let cloud_out = true;
 
+				// Draw shadow.
 				ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
 				for(let orb_it = 0, orb_len = orbConfig.list.length; orb_it < orb_len; orb_it++){
 					let orb = orbConfig.list[orb_it];
 
 					orb.cx += drift;
 
-					// Is this orb still on screen?
-					if((orb.cx + orb.r) < (me.w * 1.25))
-						cloud_out = false;
-
 					ctx.beginPath();
 					ctx.arc(orb.cx + 10, orb.cy + 10 + (Math.sin((orb.cx / 400) * orb.theta) * 5), orb.r, 0, 2 * Math.PI);
 					ctx.fill();
 				}
 
+				// Draw cloud.
 				ctx.fillStyle = orbConfig.fill;
 				for(let orb_it = 0, orb_len = orbConfig.list.length; orb_it < orb_len; orb_it++){
 					let orb = orbConfig.list[orb_it];
+
+					// Is this orb still on screen?
+					if((orb.cx + orb.r) < (me.w * 1.25))
+						cloud_out = false;
 
 					ctx.beginPath();
 					ctx.arc(orb.cx, orb.cy + (Math.sin((orb.cx / 400) * orb.theta) * 5), orb.r, 0, 2 * Math.PI);

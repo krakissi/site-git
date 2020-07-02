@@ -52,11 +52,7 @@ a .header_btn:hover {
 }
 
 #header_rat {
-	right: 5em;
-}
-
-#header_ew {
-	right: 0em;
+	right: 0em; /* 5em spacing for next icon */
 }
 
 #header {
@@ -171,6 +167,21 @@ a .header_btn:hover {
 	border-radius: 0.4em;
 	margin: 0.5em;
 }
+
+.youtube_embed {
+	position: relative;
+	width: 100%;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+.youtube_embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
 EOF
 
 # /* Special CSS for the night/evening. */

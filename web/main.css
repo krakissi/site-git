@@ -52,7 +52,10 @@ a .header_btn:hover {
 }
 
 #header_rat {
-	right: 0em; /* 5em spacing for next icon */
+	right: 5em;
+}
+#header_ew {
+	right: 0em;
 }
 
 #header {

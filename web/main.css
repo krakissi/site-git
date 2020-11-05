@@ -133,7 +133,7 @@ a .header_btn:hover {
 	font-size: 0.7em;
 }
 .story h2 a {
-	color: inherit;
+	color: yellow;
 	text-decoration: none;
 }
 .story h2 a:hover {

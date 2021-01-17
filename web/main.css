@@ -30,7 +30,7 @@ h1 a:hover { text-decoration: none; }
 	position: relative;
 	min-width: 1000px;
 	max-width: 1500px;
-	color: white;
+	color: #d2bdd2;
 	margin: 0 auto;
 }
 #content_background {
@@ -87,7 +87,7 @@ a .header_btn:hover {
 	border-top: 1px solid black;
 }
 #footer a {
-	color: yellow;
+	color: #ecec2f;
 }
 #footer_treeline {
 	position: absolute;
@@ -100,7 +100,7 @@ a .header_btn:hover {
 
 .story {
 	padding: 1em 1em 2em 1em;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.85);
 	margin: 1.5em 1em;
 	border-radius: 0.4em;
 	box-shadow: 0.1em 0.1em 0.2em black;
@@ -133,7 +133,7 @@ a .header_btn:hover {
 	font-size: 0.7em;
 }
 .story h2 a {
-	color: yellow;
+	color: #ecec2f;
 	text-decoration: none;
 }
 .story h2 a:hover {
